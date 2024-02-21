@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+//package com1;
+option java_package = "com.zz.proto.text";
+option java_outer_classname = "TextVector";
+
+message TextVectorAttr{
+  optional string rowKey = 1;
+  optional string url = 2;
+  optional string text = 3;
+  optional string ctt = 4;
+  repeated string types = 5;
+  optional string dataSource = 6;
+  repeated string avoice = 7;
+  optional float matchScore = 8;
+  repeated string entities = 9;
+  repeated string properties = 10;
+  optional float hot = 11;
+  repeated TermWeight cow = 12;
+}
+
+message TermWeight{
+  optional string term = 1;
+  optional float weight = 2;
+  optional int32 position = 3;
+  optional int32 start_offset = 4;
+  optional int32 end_offset = 5;
+  optional int32 level = 6;
+}
